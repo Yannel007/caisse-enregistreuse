@@ -1,1 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
+int main ()
+{
+	printf("La somme a payer est de :\n");
+	srand(time(NULL));
+	double min =10;
+	double max = 100000;
+	double paye= rand() % (max - min + 1) + min;
+	printf("(%2f)Rs\n",paye)
+	print("Veuillez entrez le montant de votre argent\n");
+	double payer = 0;
+	scanf("%d", &payer);
+	
+	do {
+		printf("Erreur\n");
+		printf("Veuillez reessayer, Montant insuffisant\n");
+		scanf("%d", &payer);
+	}
+	while ( payer >= paye );
+	double monaie = paye - payer
+	printf("Paiement effectuer : (%2f)Rs\n", monaie);
+	
+	return 0;
+}
